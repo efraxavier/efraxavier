@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 
 const App = () => {
-  const name = "_EfraimBeloXavier_";
+  const name = "efraim belo xavier";
 
   return (
     <div className="pip-container">
@@ -13,7 +13,7 @@ const App = () => {
 
       {/* Seção de Apresentação */}
       <section className="hero-section">
-        <h2 className="section-title">Quality Engineering Specialist</h2>
+        <h2 className="section-title">Quality Engineering</h2>
         <p>Automated & Manual Testing: API, Front-End, Mobile, Performance</p>
         <p>São Paulo, Brazil</p>
       </section>
@@ -25,7 +25,7 @@ const App = () => {
           <h3>Dock – Banking As A Service</h3>
           <p>
             <b>QA Intern</b> (Sept/2019 – Jul/2021) <br />
-            <b>Junior QA Engineer</b> (Jul/2021 – Present)
+            <b>QA Engineer</b> (Jul/2021 – Present)
           </p>
           <ul>
             <li>Created and maintained product documentation.</li>
@@ -59,14 +59,14 @@ const App = () => {
       <section className="projects-section">
         <h2 className="section-title">Skills</h2>
         <ul>
-          <li>API Testing (Manual/Automated)</li>
+          <li>API Testing (Ruby, Cucumber, Pytest)</li>
           <li>Front-End Test Automation (Cypress, JS, Node.js)</li>
           <li>Performance Testing with JMeter and K6</li>
           <li>Mobile Automation: Appium, Cucumber (Android & iOS)</li>
-          <li>Cloud Tools: AWS (DynamoDB, Cloudwatch)</li>
+          <li>AWS: DynamoDB, Cloudwatch, Secrets Manager and KMS</li>
           <li>CI/CD: Jenkins | GitHub</li>
           <li>Languages: Ruby, Python, JavaScript</li>
-          <li>Tools: VSCode, Postman, RubyMine</li>
+          <li>Tools: RubyMine, AWS, Pytest, Cypress, JMeter</li>
         </ul>
       </section>
 
@@ -79,7 +79,7 @@ const App = () => {
             2023 - Present
           </li>
           <li>
-            <b>Information Systems</b> <br /> USP Leste, Transfer (2018–2022)
+            <b>Information Systems</b> <br /> USP Leste - Transfer (2018–2022)
           </li>
         </ul>
       </section>
@@ -88,6 +88,7 @@ const App = () => {
       <section className="projects-section">
         <h2 className="section-title">Certifications & Courses</h2>
         <ul>
+          <li>TOEIC - Listening: 475. Reading: 450.</li>
           <li>AWS Cloud Practitioner Certification (2023)</li>
           <li>ISTQB Foundation Level - CTFL Certification (2022)</li>
           <li>Mobile Automation: Appium & Jenkins (2022)</li>
@@ -103,8 +104,7 @@ const App = () => {
         <ul>
           <li>Email: <a href="mailto:efraimbx99@gmail.com">efraimbx99@gmail.com</a></li>
           <li>LinkedIn: <a href="https://linkedin.com/in/efraim-belo-xavier">in/efraim-belo-xavier</a></li>
-          <li>GitHub: <a href="https://github.com/efraimxavier">github.com/efraimxavier</a></li>
-          <li>Phone: +55 (11) 94920-0905</li>
+          <li>GitHub: <a href="https://github.com/efraxavier">github.com/efraimxavier</a></li>
         </ul>
       </footer>
     </div>

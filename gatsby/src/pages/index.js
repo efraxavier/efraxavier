@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.css';
+import { textShadow } from 'web-animations-js';
 
 function App() {
   return (
@@ -52,4 +53,45 @@ auctor, vestibulum magna sed, convallis ex.</p>
   );
 }
 
-export default App;
+
+function encodeText(text) {
+  return text.replace(/[^a-zA-Z0-9]+/g, '').toLowerCase().replace(/\s+/g, '-');
+}
+
+function decodeText(encodedText) {
+  const originalText = encodeText(encodedText).replace(/^-+/, '');
+  if (originalText !== encodedText) {
+    return '';
+  }
+  // Add additional decoding logic here if needed
+  return originalText;
+}
+
+const text = 'Efraim Belo Xavier';
+
+textShadow({
+  text: decodeText(encodeText(text)),
+  x: -200,
+  y: -100,
+  scale: 1.5,
+  rotate: Math.PI / 4,
+  color: '#ffffff',
+  duration: 3000,
+  easing: 'cubic-bezier(0.215, 0.610, 0.755, 0.355)',
+});
+
+canvas.style.position = 'relative';
+document.body.appendChild(canvas);
+
+setInterval(() => {
+  textShadow({
+    text: decodeText(encodeText(text)),
+    x: -200,
+    y: -100,
+    scale: 1.5,
+    rotate: Math.PI / 4,
+    color: '#ffffff',
+    duration: 3000,
+    easing: 'cubic-bezier(0.215, 0.610, 0.755, 0.355)',
+  });
+}, 200);

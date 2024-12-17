@@ -17,23 +17,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     padding: 20px;
+    text-align: center;
   }
   
-  /* Título Principal com efeito */
+  /* Título com efeito Matrix */
   .banner {
     font-size: 3em;
-    text-transform: uppercase;
     margin-bottom: 20px;
+    text-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41;
   }
   
   .matrix-text {
-    animation: flicker 2.5s infinite alternate;
-    text-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41, 0 0 20px #00ff41;
+    animation: flicker 1.5s infinite alternate;
   }
   
-  /* Animação */
   @keyframes flicker {
     0% {
       opacity: 0.9;
@@ -43,33 +41,40 @@
     }
   }
   
-  /* Seção Estilo Pip-Boy */
+  /* Seções */
   .hero-section,
-  .projects-section {
-    width: 80%;
-    max-width: 600px;
+  .projects-section,
+  .footer {
+    width: 90%;
+    max-width: 800px;
     margin: 10px 0;
     border: 1px solid #00ff41;
     padding: 15px;
+    box-shadow: 0 0 10px #00ff41;
     text-align: left;
-    box-shadow: 0 0 15px #00ff41;
   }
   
   .section-title {
+    color: #00ff41;
     margin-bottom: 10px;
     text-decoration: underline;
+    text-align: center;
   }
   
-  .projects li {
-    list-style: none;
-    padding: 5px 0;
-    font-size: 1.1em;
+  ul {
+    list-style-type: none;
   }
   
-  /* Footer */
-  .footer {
-    margin-top: 20px;
-    font-size: 0.8em;
-    color: #008f11; /* Verde mais escuro */
+  li {
+    margin: 8px 0;
+  }
+  
+  a {
+    color: #00ff41;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
   }
   

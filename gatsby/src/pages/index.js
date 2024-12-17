@@ -1,36 +1,21 @@
 import React from "react";
 import "./styles.css";
-import React, { useEffect, useState } from "react";
-import figlet from "figlet";
-import "./styles.css";
 
 const App = () => {
-  const name = "efraim belo xavier"; // Nome dinâmico
-  const [asciiArt, setAsciiArt] = useState(""); // Estado para armazenar o ASCII art
-
-  useEffect(() => {
-    // Gerar ASCII art usando a biblioteca figlet
-    figlet(name, { font: "Standard" }, (err, data) => {
-      if (err) {
-        console.error("Erro ao gerar ASCII art:", err);
-        return;
-      }
-      setAsciiArt(data); // Define o ASCII art no estado
-    });
-  }, [name]); // Atualiza caso o 'name' mude
+  const name = "efraim belo xavier";
 
   return (
     <div className="pip-container">
       {/* Banner */}
       <div className="banner" data-tilt>
-        <pre className="ascii-art">{asciiArt}</pre>
+        <span className="matrix-text">{name}</span>
       </div>
 
       {/* Seção de Apresentação */}
       <section className="hero-section">
         <h2 className="section-title">Quality Engineering</h2>
         <p>Automated & Manual Testing: API, Front-End, Mobile, Performance</p>
-        <p>São Paulo, Brazil</p>
+        <p>Zona Leste - São Paulo, Brazil</p>
       </section>
 
       {/* Experiência Profissional */}

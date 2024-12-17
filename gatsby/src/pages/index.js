@@ -1,76 +1,38 @@
-import React, { useEffect, useState } from 'react';
-import './styles.css';
-
-const encodeText = (text) => {
-  return text
-    .replace(/[^a-zA-Z0-9]+/g, '') // Remove caracteres especiais
-    .toLowerCase()
-    .replace(/\s+/g, '-'); // Substitui espaços
-};
-
-const decodeText = (encodedText) => {
-  return encodedText.replace(/-/g, ' ').replace(/[^a-zA-Z ]/g, '');
-};
+import React from "react";
+import "./styles.css";
 
 const App = () => {
-  const name = 'Efraim Belo Xavier';
-  const [shadowText, setShadowText] = useState('');
-
-  useEffect(() => {
-    const encoded = encodeText(name);
-    const decoded = decodeText(encoded);
-    setShadowText(decoded);
-  }, []);
+  const name = "efraim belo xavier";
 
   return (
-    <div className="container">
-      {/* Banner */}
-      <h1 className="hacker-banner" data-text={shadowText}>
-        {`_${name.replace(/\s+/g, '')}__`}
-      </h1>
+    <div className="pip-container">
+      {/* Título com efeito hacker */}
+      <div className="banner" data-tilt>
+        <span className="matrix-text">{name}</span>
+      </div>
 
-      {/* Hero Section */}
+      {/* Seção de Apresentação */}
       <section className="hero-section">
-        <h2>Frontend Developer</h2>
+        <h2 className="section-title">Frontend Developer</h2>
         <p>
-          Building impactful user experiences with pixel-perfect designs and clean code.
+          Coding like it's the end of the world. Creating interfaces that stand
+          the test of time.
         </p>
-        <button className="btn-hacker">Learn More</button>
       </section>
 
-      {/* Projects Section */}
+      {/* Seção de Projetos */}
       <section className="projects-section">
-        <h2>Projects</h2>
-        <div className="project-grid">
-          {['Project 1', 'Project 2', 'Project 3'].map((project, index) => (
-            <div className="project-item" key={index}>
-              <h3>{project}</h3>
-              <p>
-                Innovative and dynamic solutions for real-world problems using the latest
-                web technologies.
-              </p>
-              <img
-                src={`https://picsum.photos/200/30${index}`}
-                alt={`${project} Image`}
-              />
-            </div>
-          ))}
-        </div>
+        <h2 className="section-title">Projects</h2>
+        <ul className="projects">
+          <li>● Project One - Revolutionizing UIs</li>
+          <li>● Project Two - Code like a Ghost</li>
+          <li>● Project Three - Into the Matrix</li>
+        </ul>
       </section>
 
-      {/* About Section */}
-      <section className="about-section">
-        <h2>About Me</h2>
-        <p>
-          Passionate about blending aesthetics and functionality to create futuristic
-          interfaces and experiences.
-        </p>
-        <button className="btn-hacker">Contact Me</button>
-      </section>
-
-      {/* Footer Section */}
-      <footer className="footer-section">
-        <p>&copy; 2023 {name}</p>
+      {/* Footer */}
+      <footer className="footer">
+        <p>&lt;2024&gt; Designed by {name.replace("_", "").replace("_", "")}</p>
       </footer>
     </div>
   );
